@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
     :root {
       --bg:           #0b0b0d;
       --surface:      #131316;
@@ -30,9 +30,9 @@
       --f-body:       'DM Sans', system-ui, sans-serif;
       --f-mono:       'IBM Plex Mono', monospace;
     }
-
+ 
     html { scroll-behavior: smooth; }
-
+ 
     body {
       background: var(--bg);
       color: var(--text);
@@ -41,7 +41,7 @@
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
     }
-
+ 
     /* ── NAV ─────────────────────────────────────────── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -66,7 +66,7 @@
       color: var(--text-dim); text-decoration: none; transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--text); }
-
+ 
     /* ── HERO ────────────────────────────────────────── */
     .hero {
       position: relative; min-height: 100vh;
@@ -149,7 +149,7 @@
       0%,100% { opacity: 0.35; width: 36px; }
       50%      { opacity: 0.9;  width: 56px; }
     }
-
+ 
     /* ── SHARED SECTION ──────────────────────────────── */
     .section {
       padding: 8rem 4rem;
@@ -172,7 +172,7 @@
     }
     .section-title em { font-style: italic; color: var(--accent); }
     .section-header { margin-bottom: 4.5rem; }
-
+ 
     /* ── ABOUT ───────────────────────────────────────── */
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
     .about-bio { font-size: 1rem; line-height: 1.9; color: var(--text-dim); }
@@ -201,7 +201,7 @@
       transition: all 0.2s; cursor: default;
     }
     .skill-tag:hover { border-color: var(--accent); color: var(--accent); }
-
+ 
     /* ── PROJECTS ────────────────────────────────────── */
     .filter-row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
     .filter-btn {
@@ -214,7 +214,7 @@
     .filter-btn:hover, .filter-btn.active {
       background: var(--accent-a); border-color: var(--accent); color: var(--accent);
     }
-
+ 
     /* Featured project rows */
     .proj-feat {
       display: grid; grid-template-columns: 1fr 1fr;
@@ -237,7 +237,7 @@
       border-left: 1px solid var(--border);
     }
     .proj-feat.flip .proj-body { border-left: none; border-right: 1px solid var(--border); }
-
+ 
     /* Tag chips */
     .tag-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.4rem; }
     .tag {
@@ -252,7 +252,7 @@
     .t-mech   { background: rgba(192,132,252,0.1); color: var(--purple); border: 1px solid rgba(192,132,252,0.25); }
     .t-rd     { background: rgba(232,160,32,0.08); color: var(--accent); border: 1px solid rgba(232,160,32,0.2); }
     .t-mfg    { background: rgba(248,113,113,0.1); color: var(--red);    border: 1px solid rgba(248,113,113,0.25); }
-
+ 
     .proj-org {
       font-family: var(--f-mono); font-size: 0.68rem;
       letter-spacing: 0.14em; text-transform: uppercase;
@@ -278,7 +278,7 @@
       font-family: var(--f-mono); font-size: 0.62rem;
       letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
     }
-
+ 
     /* Project grid cards */
     .proj-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 3px; margin-top: 3px; }
     .proj-card {
@@ -313,7 +313,7 @@
       content: '→'; position: absolute; left: 0;
       color: var(--accent); opacity: 0.65; font-size: 0.72rem;
     }
-
+ 
     /* ── EDUCATION ───────────────────────────────────── */
     .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; }
     .edu-item { padding: 2rem 0; border-bottom: 1px solid var(--border); }
@@ -338,7 +338,7 @@
     .achieve-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
     .achieve-text { font-size: 0.85rem; color: var(--text-dim); line-height: 1.55; }
     .achieve-text strong { display: block; color: var(--text); font-weight: 500; margin-bottom: 0.15rem; font-size: 0.88rem; }
-
+ 
     /* ── FOOTER ──────────────────────────────────────── */
     footer {
       padding: 5rem 4rem 3rem;
@@ -369,9 +369,9 @@
       font-family: var(--f-mono); font-size: 0.65rem;
       letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
     }
-
+ 
     @keyframes glbSpin { to { transform: rotate(360deg); } }
-
+ 
     /* ── REVEAL ANIMATIONS ───────────────────────────── */
     .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.65s ease, transform 0.65s ease; }
     .reveal.in { opacity: 1; transform: translateY(0); }
@@ -379,7 +379,7 @@
     .d2 { transition-delay: 0.2s; }
     .d3 { transition-delay: 0.3s; }
     .d4 { transition-delay: 0.4s; }
-
+ 
     /* ── RESPONSIVE ──────────────────────────────────── */
     @media (max-width: 1024px) {
       nav { padding: 1.2rem 2rem; }
@@ -401,7 +401,7 @@
   </style>
 </head>
 <body>
-
+ 
 <!-- ── NAVIGATION ───────────────────────────────────── -->
 <nav id="nav">
   <a class="nav-brand" href="#home">KE / Portfolio</a>
@@ -412,7 +412,7 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
-
+ 
 <!-- ── HERO ─────────────────────────────────────────── -->
 <section class="hero" id="home">
   <div class="hero-grid"></div>
@@ -430,7 +430,7 @@
   </div>
   <div class="hero-scroll"><div class="scroll-bar"></div>Scroll to explore</div>
 </section>
-
+ 
 <!-- ── ABOUT ─────────────────────────────────────────── -->
 <section class="section section-alt" id="about">
   <div class="about-grid">
@@ -508,14 +508,14 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ── PROJECTS ───────────────────────────────────────── -->
 <section class="section" id="projects">
   <div class="section-header">
     <div class="eyebrow">Work</div>
     <h2 class="section-title">Selected Projects</h2>
   </div>
-
+ 
   <div class="filter-row">
     <button class="filter-btn active" data-f="all">All</button>
     <button class="filter-btn" data-f="cad">CAD & Design</button>
@@ -525,7 +525,7 @@
     <button class="filter-btn" data-f="mech">Mechatronics</button>
     <button class="filter-btn" data-f="rd">R&D</button>
   </div>
-
+ 
   <!-- ── FEATURED 01: mLSD Tool ───────────────── -->
   <div class="proj-feat reveal" data-tags="tools rd fea">
     <div class="proj-visual">
@@ -587,7 +587,7 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- ── FEATURED 02: Bevel Gear Fixture ──────── -->
   <div class="proj-feat flip reveal" data-tags="cad fea test">
     <div class="proj-visual">
@@ -651,7 +651,7 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- ── FEATURED 03: Surrogate DOE Program ───── -->
   <div class="proj-feat reveal" data-tags="test rd tools">
     <div class="proj-visual">
@@ -751,7 +751,7 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- ── FEATURED 04: Three Pinion Coaxial ───── -->
   <div class="proj-feat flip reveal" data-tags="cad mfg">
     <div class="proj-visual" style="position:relative; min-height:420px; background:#0f0f12;">
@@ -790,7 +790,7 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- ── FEATURED 05: Eucalyptus 9T65 ─────────── -->
   <div class="proj-feat reveal" data-tags="cad rd">
     <div class="proj-visual">
@@ -802,11 +802,11 @@
           </radialGradient>
         </defs>
         <rect width="440" height="400" fill="url(#g5)"/>
-
+ 
         <!-- Drawing sheet border (title block feel) -->
         <rect x="28"  y="28"  width="384" height="344" fill="none" stroke="#38b2a8" stroke-width="1.2" opacity="0.35"/>
         <rect x="36"  y="36"  width="368" height="230" fill="none" stroke="#38b2a8" stroke-width="0.6" opacity="0.22"/>
-
+ 
         <!-- Orthographic front view: open differential cross-section -->
         <!-- Outer case -->
         <rect x="120" y="55" width="200" height="195" rx="4" fill="none" stroke="#38b2a8" stroke-width="1.5" opacity="0.5"/>
@@ -823,7 +823,7 @@
         <circle cx="220" cy="184" r="18" fill="none" stroke="#38b2a8" stroke-width="1" opacity="0.4"/>
         <!-- Center point -->
         <circle cx="220" cy="152" r="4" fill="#38b2a8" opacity="0.4"/>
-
+ 
         <!-- Dimension lines — horizontal -->
         <line x1="120" y1="272" x2="320" y2="272" stroke="#38b2a8" stroke-width="0.6" opacity="0.35"/>
         <line x1="120" y1="266" x2="120" y2="278" stroke="#38b2a8" stroke-width="0.6" opacity="0.35"/>
@@ -834,16 +834,16 @@
         <line x1="50" y1="55"  x2="62" y2="55"  stroke="#38b2a8" stroke-width="0.6" opacity="0.35"/>
         <line x1="50" y1="250" x2="62" y2="250" stroke="#38b2a8" stroke-width="0.6" opacity="0.35"/>
         <text x="48" y="158" fill="#38b2a8" font-size="8" font-family="IBM Plex Mono" text-anchor="middle" opacity="0.5" transform="rotate(-90 48 158)">195.00</text>
-
+ 
         <!-- GD&T callouts -->
         <rect x="330" y="142" width="64" height="20" rx="1" fill="none" stroke="#38b2a8" stroke-width="0.7" opacity="0.45"/>
         <line x1="322" y1="152" x2="330" y2="152" stroke="#38b2a8" stroke-width="0.6" opacity="0.4"/>
         <text x="335" y="156" fill="#38b2a8" font-size="8" font-family="IBM Plex Mono" opacity="0.6">⌀ 0.02 A</text>
-
+ 
         <rect x="232" y="104" width="52" height="18" rx="1" fill="none" stroke="#38b2a8" stroke-width="0.7" opacity="0.45"/>
         <line x1="220" y1="103" x2="232" y2="113" stroke="#38b2a8" stroke-width="0.6" opacity="0.4"/>
         <text x="237" y="117" fill="#38b2a8" font-size="8" font-family="IBM Plex Mono" opacity="0.6">// 0.05</text>
-
+ 
         <!-- Title block area -->
         <rect x="36"  y="290" width="368" height="74" fill="none" stroke="#38b2a8" stroke-width="0.6" opacity="0.22"/>
         <line x1="36"  y1="308" x2="404" y2="308" stroke="#38b2a8" stroke-width="0.4" opacity="0.2"/>
@@ -879,10 +879,10 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- ── GRID CARDS ────────────────────────────── -->
   <div class="proj-grid">
-
+ 
     <!-- 04: MMRI Tribology -->
     <div class="proj-card reveal" data-tags="test rd">
       <div class="tag-row"><span class="tag t-test">Test & Analysis</span><span class="tag t-rd">R&D</span></div>
@@ -899,7 +899,7 @@
       </ul>
       <div class="tag-row"><span class="tag t-tools">ASTM G133</span><span class="tag t-tools">Weighted Ranking</span><span class="tag t-tools">Tribometry</span></div>
     </div>
-
+ 
     <!-- 05: C-Arm -->
     <div class="proj-card reveal d1" data-tags="mech rd">
       <div class="tag-row"><span class="tag t-mech">Mechatronics</span><span class="tag t-rd">R&D</span></div>
@@ -916,7 +916,7 @@
       </ul>
       <div class="tag-row"><span class="tag t-mech">Arduino / C++</span><span class="tag t-mech">SolidWorks</span><span class="tag t-mech">Sensor Fusion</span></div>
     </div>
-
+ 
     <!-- 06: NIR Spectrometer -->
     <div class="proj-card reveal" data-tags="mech rd">
       <div class="tag-row"><span class="tag t-rd">R&D</span><span class="tag t-mech">Electronics</span></div>
@@ -933,7 +933,7 @@
       </ul>
       <div class="tag-row"><span class="tag t-mech">PCB Design</span><span class="tag t-rd">Compressive Sensing</span><span class="tag t-rd">Photonics</span></div>
     </div>
-
+ 
     <!-- 07: CF Fin -->
     <div class="proj-card reveal d1" data-tags="cad mfg">
       <div class="tag-row"><span class="tag t-mfg">Manufacturing</span><span class="tag t-cad">CAD</span></div>
@@ -950,10 +950,10 @@
       </ul>
       <div class="tag-row"><span class="tag t-mfg">Composites</span><span class="tag t-mfg">Tooling Design</span><span class="tag t-cad">SolidWorks</span></div>
     </div>
-
+ 
   </div>
 </section>
-
+ 
 <!-- ── BACKGROUND ─────────────────────────────────── -->
 <section class="section section-alt" id="background">
   <div class="edu-grid">
@@ -1033,7 +1033,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ── FOOTER / CONTACT ───────────────────────────── -->
 <footer id="contact">
   <div class="footer-top">
@@ -1052,19 +1052,19 @@
     <span class="footer-note">OEM program names anonymized — confidential work product</span>
   </div>
 </footer>
-
+ 
 <script>
   // Hero entrance
   window.addEventListener('load', () => {
     document.getElementById('hero-content').classList.add('loaded');
   });
-
+ 
   // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
   }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
+ 
   // Nav background on scroll
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
@@ -1072,7 +1072,7 @@
       ? 'rgba(11,11,13,0.96)'
       : 'rgba(11,11,13,0.82)';
   });
-
+ 
   // Project filters
   const filters = document.querySelectorAll('.filter-btn');
   const projects = document.querySelectorAll('[data-tags]');
@@ -1088,7 +1088,7 @@
     });
   });
 </script>
-
+ 
 <!-- ── THREE.JS STL VIEWER ───────────────────────────── -->
 <script type="importmap">
 {
@@ -1102,11 +1102,11 @@
   import * as THREE from 'three';
   import { STLLoader } from 'three/addons/loaders/STLLoader.js';
   import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-
+ 
   const canvas    = document.getElementById('glb-canvas');
   const container = canvas.parentElement;
   const loading   = document.getElementById('glb-loading');
-
+ 
   // Renderer
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -1114,7 +1114,7 @@
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1.1;
   renderer.setClearColor(0x0f0f12, 1);
-
+ 
   function resize() {
     const w = container.clientWidth;
     const h = container.clientHeight || 420;
@@ -1122,29 +1122,29 @@
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
   }
-
+ 
   // Scene + camera
   const scene  = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(42, 1, 0.01, 1000);
   camera.position.set(0, 0.4, 2.2);
   resize();
-
+ 
   // Lighting
   const ambient = new THREE.AmbientLight(0xdddde8, 0.55);
   scene.add(ambient);
-
+ 
   const key = new THREE.DirectionalLight(0xfff4e0, 2.2);
   key.position.set(3, 5, 4);
   scene.add(key);
-
+ 
   const fill = new THREE.DirectionalLight(0xc084fc, 0.55);
   fill.position.set(-4, 2, -2);
   scene.add(fill);
-
+ 
   const rim = new THREE.DirectionalLight(0x5b8fde, 0.4);
   rim.position.set(0, -3, -5);
   scene.add(rim);
-
+ 
   // OrbitControls
   const controls = new OrbitControls(camera, renderer.domElement);
   controls.enableDamping   = true;
@@ -1154,7 +1154,7 @@
   controls.autoRotate      = true;
   controls.autoRotateSpeed = 0.7;
   controls.enablePan       = false;
-
+ 
   // Stop auto-rotate on user interaction, resume after 3 s idle
   let idleTimer;
   renderer.domElement.addEventListener('pointerdown', () => {
@@ -1164,28 +1164,30 @@
   renderer.domElement.addEventListener('pointerup', () => {
     idleTimer = setTimeout(() => { controls.autoRotate = true; }, 3000);
   });
-
+ 
   // Load STL
   const loader = new STLLoader();
   loader.load(
     './bev-n.STL',
     (geometry) => {
       geometry.computeVertexNormals();
+ 
+      // Centre geometry directly rather than offsetting mesh position
+      geometry.center();
+ 
       const material = new THREE.MeshStandardMaterial({
         color:     0x9a9ab0,
         metalness: 0.6,
         roughness: 0.35,
+        side:      THREE.DoubleSide, // handles inverted normals from SolidWorks
       });
       const mesh = new THREE.Mesh(geometry, material);
-
-      // Centre + fit in view
-      geometry.computeBoundingBox();
-      const box    = geometry.boundingBox;
-      const centre = box.getCenter(new THREE.Vector3());
-      const size   = box.getSize(new THREE.Vector3()).length();
-      mesh.position.sub(centre);
-      mesh.scale.setScalar(1.6 / size);
-
+ 
+      // Fit to view using bounding sphere (more reliable than bounding box)
+      geometry.computeBoundingSphere();
+      const radius = geometry.boundingSphere.radius;
+      mesh.scale.setScalar(1.2 / radius);
+ 
       scene.add(mesh);
       controls.target.set(0, 0, 0);
       controls.update();
@@ -1198,7 +1200,7 @@
         letter-spacing:0.18em;text-transform:uppercase;color:#46465a;">Model unavailable</span>`;
     }
   );
-
+ 
   // Render loop
   function animate() {
     requestAnimationFrame(animate);
@@ -1206,9 +1208,10 @@
     renderer.render(scene, camera);
   }
   animate();
-
+ 
   window.addEventListener('resize', resize);
 </script>
-
+ 
 </body>
 </html>
+ 
