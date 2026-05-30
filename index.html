@@ -1136,7 +1136,7 @@
   // Scene + camera
   const scene  = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(42, 1, 0.01, 1000);
-  camera.position.set(0, 0.4, 2.2);
+  camera.position.set(0, 0.4, 3.4);
 
   function resize() {
     const w = container.clientWidth;
@@ -1150,7 +1150,7 @@
 
   // Lighting — dramatic scheme matching portfolio palette
   // Low ambient so shadows read clearly on dark bg
-  const ambient = new THREE.AmbientLight(0xdddde8, 0.55);
+  const ambient = new THREE.AmbientLight(0xdddde8, 1.1);
   scene.add(ambient);
 
   // Warm key light — main illumination from upper right
@@ -1212,7 +1212,7 @@
       geometry.center();
 
       const material = new THREE.MeshStandardMaterial({
-        color:     0x4a4a5a,  // dark neutral base — lets coloured lights do the work
+        color:     0x9a9ab0,  // lighter neutral base — lifts model off dark background
         metalness: 0.9,       // high metalness so rim/accent lights reflect crisply
         roughness: 0.25,      // low roughness for visible specular highlights
         side:      THREE.DoubleSide,
