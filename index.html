@@ -1107,7 +1107,7 @@
 
 </script>
 
-<!-- ── THREE.JS STL VIEWER ───────────────────────────── -->
+<!-- ── THREE.JS STL VIEWER (FIXED) ──────────────────── -->
 <script type="importmap">
 {
   "imports": {
@@ -1133,6 +1133,11 @@
   renderer.toneMappingExposure = 1.7;
   renderer.setClearColor(0x131316, 1); // matches --surface
 
+  // Scene + camera
+  const scene  = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(42, 1, 0.01, 1000);
+  camera.position.set(0, 0.4, 2.2);
+
   function resize() {
     const w = container.clientWidth;
     const h = container.clientHeight || 420;
@@ -1140,12 +1145,8 @@
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
   }
-
-  // Scene + camera
-  const scene  = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(42, 1, 0.01, 1000);
-  camera.position.set(0, 0.4, 2.2);
   resize();
+  window.addEventListener('resize', resize);
 
   // Lighting — dramatic scheme matching portfolio palette
   // Low ambient so shadows read clearly on dark bg
@@ -1192,6 +1193,14 @@
     idleTimer = setTimeout(() => { controls.autoRotate = true; }, 3000);
   });
 
+  // Animation loop — required for damping and auto-rotate to work
+  function animate() {
+    requestAnimationFrame(animate);
+    controls.update();
+    renderer.render(scene, camera);
+  }
+  animate();
+
   // Load STL
   const loader = new STLLoader();
   loader.load(
@@ -1223,4 +1232,11 @@
     undefined,
     (err) => {
       console.error('STL load error', err);
-      loading.innerHTML = `<span style="font-
+      loading.innerHTML = `<span style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;
+        letter-spacing:0.15em;text-transform:uppercase;color:#f87171;">
+        Failed to load model</span>`;
+    }
+  );
+</script>
+</body>
+</html>
